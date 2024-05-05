@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+    app:
+        container_name: app
+        platform: linux/amd64
+        image: lazerg/laravel:latest
+        ports:
+            - "8000:80"
+        volumes:
+            - .:/var/www/app
+
+    database:
+        container_name: database
+        image: postgres:latest
+        environment:
+            POSTGRES_DB: ${DB_DATABASE}
+            POSTGRES_USER: ${DB_USERNAME}
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
+        ports:
+            - "5432:5432"
+        volumes:
+            - ./volumes/database:/var/lib/postgresql/data
+
+    database-test:
+        container_name: database-test
+        image: postgres:latest
+        environment:
+            POSTGRES_DB: test
+            POSTGRES_USER: test
+            POSTGRES_PASSWORD: password
+        ports:
+            - "5433:5432"
+        volumes:
+            - ./volumes/database-test:/var/lib/postgresql/data

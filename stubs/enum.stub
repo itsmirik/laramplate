@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use Lazerg\LaravelEnumPro\EnumPro;
+
+enum {{ class }}
+{
+    use EnumPro;
+}

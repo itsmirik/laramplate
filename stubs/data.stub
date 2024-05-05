@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Utility\Data\Data;
+
+class {{ class }} extends Data
+{
+
+}

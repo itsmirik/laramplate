@@ -1,0 +1,13 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Utility\Action\CoreAction;
+
+class {{ class }} extends CoreAction
+{
+    public function handle()
+    {
+
+    }
+}

@@ -1,0 +1,30 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Utility\Request\CoreRequest;
+
+/**
+ * @method validated()
+ */
+class {{ class }} extends CoreRequest
+{
+    /**
+     * Laravel data class for validation
+     *
+     * @var string
+     */
+    protected string $dataClass;
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     */
+    public function rules(): array
+    {
+        return [
+            //
+        ];
+    }
+}
